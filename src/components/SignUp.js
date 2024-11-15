@@ -20,7 +20,7 @@ function SignUp() {
             setEmail('');
             setPassword('');
             setTimeout(() => {
-                navigate('/');  // 跳转到登录页面
+                navigate('/');  // Skip to Sign In Page
             }, 2000);
         } catch (error) {
             setMessage(error.response?.data?.error || 'Sign up failed');

@@ -4,7 +4,7 @@ import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 
 function App() {
-    const [user, setUser] = useState(null);  // 创建 user 状态和 setUser 更新函数
+    const [user, setUser] = useState(null);
 
     return (
         <Router>

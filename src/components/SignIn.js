@@ -17,16 +17,15 @@ function SignIn({ setUser }) {
                     'Content-Type': 'application/json'
                 }
             });
-            // 假设你使用 localStorage 来保存 token
-            localStorage.setItem('token', response.data.token); // 保存 token
+            localStorage.setItem('token', response.data.token);
     
-            // 设置用户信息
+            // SET USER'S information
             setUser({ token: response.data.token });
     
             setMessage('Sign in successful');
             setEmail('');
             setPassword('');
-            navigate('/homepage'); // 登录成功后跳转到 Homepage
+            navigate('/homepage'); // Skip to Homepage
         } catch (error) {
             if (error.response) {
                 setMessage(`Error: ${error.response.data.error}`);
